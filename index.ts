@@ -13,6 +13,8 @@ interface Contact {
 
 class ContactCard implements Person, Contact {
     firstName: string;
+    lastName: string;
+    birthday: Date;
     phoneNumber: number;
 
     constructor(firstName: string) {
@@ -24,20 +26,21 @@ class ContactCard implements Person, Contact {
     }
 
     addToFavortes(){
-    console.log("adding to favortes!");
+        console.log("adding to favortes!");
     }
 
     formatNumber(): void {
-        console.log(this.phoneNumber.toNumberString());
+        console.log(this.newMethod().phoneNumber.toString());
     }
+
+    private newMethod() {
+        return this;
+    }
+
 }
 
-const ContactCard = new Person("Sam");
+const contactCard = new ContactCard("Sam");
 
-ContactCard.firstName();
-ContactCard.LastName();
-ContactCard.birthday();
-ContactCard.phoneNumber()
-ContactCard.email();
-ContactCard.slack();
-ContactCard.formatNumber();
+contactCard.firstName();
+contactCard.phoneNumber()
+contactCard.formatNumber();
