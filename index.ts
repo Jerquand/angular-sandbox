@@ -41,6 +41,6 @@ class ContactCard implements Person, Contact {
 
 const contactCard = new ContactCard("Sam");
 
-contactCard.firstName();
-contactCard.phoneNumber()
+ContactCard.firstName();
+ContactCard.phoneNumber()
 contactCard.formatNumber();
