@@ -16,18 +16,19 @@ class ContactCard implements Person, Contact {
     phoneNumber: number;
 
     constructor(firstName: string) {
-        this.firstName = new ContactCard (firstName);
+        this.firstName = firstName;
     }
 
     sendMessage(){
-        console.log(this.sendMessage!());
+        console.log("send message!");
     }
 
     addToFavortes(){
-        console.log(this.sendMessage!());
+    console.log("adding to favortes!");
     }
-    phoneNumber(): void {
-        console.log(this.currentNumber.toNumberString());
+
+    formatNumber(): void {
+        console.log(this.phoneNumber.toNumberString());
     }
 }
 
