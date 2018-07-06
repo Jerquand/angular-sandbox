@@ -14,19 +14,29 @@ interface Contact {
 class ContactCard implements Person, Contact {
     firstName: string;
     phoneNumber: number;
+
     constructor(firstName: string) {
-        this.firstName= new Person();
+        this.firstName = new ContactCard (firstName);
     }
 
     sendMessage(){
         console.log(this.sendMessage!());
     }
-}
-   addToFavortes(){
+
+    addToFavortes(){
         console.log(this.sendMessage!());
+    }
+    phoneNumber(): void {
+        console.log(this.currentNumber.toNumberString());
     }
 }
 
-const ContactCard = new Person(sam);
+const ContactCard = new Person("Sam");
 
-ContactCard.printName();
+ContactCard.firstName();
+ContactCard.LastName();
+ContactCard.birthday();
+ContactCard.phoneNumber()
+ContactCard.email();
+ContactCard.slack();
+ContactCard.formatNumber();
